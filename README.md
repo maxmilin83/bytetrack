@@ -1,5 +1,10 @@
 # ByteTrack App 🍽️
 
+### (Note: Image analysis functionality will not work unless you use a valid openAI key with purchased tokens)
+
+### Video demo : https://www.youtube.com/watch?v=noK_LjckrGY
+
+
 ## 📖 Overview
 
 **ByteTrack** is a mobile application that helps users track their daily food intake and nutritional information. The app uses **AI-powered image analysis** to identify food items and calculate their nutritional values, including:
