@@ -14,7 +14,7 @@
 - Carbohydrates
 - Fat
 
-Users can log meals, set calorie targets, and monitor progress toward dietary goals. The app integrates with **OpenAI's GPT-4** to analyze food images and return structured nutritional data in JSON format. It also supports manual entries, meal deletion, and resetting the analysis state.
+Users can log meals, set calorie targets, and monitor progress toward dietary goals. The app integrates with **OpenAI's GPT-4** to analyze food images and return structured nutritional data in JSON format. It also supports manual entries and meal deletion.
 
 ---
 
@@ -43,7 +43,7 @@ Users can log meals, set calorie targets, and monitor progress toward dietary go
 
 ### 3. Calorie Target Tracking
 
-- Set a daily calorie target.
+- Set a daily calorie target by updating your profile.
 - Visual progress display shows how close users are to reaching their goal.
 
 ### 4. Manual Entry
@@ -89,12 +89,6 @@ Users can log meals, set calorie targets, and monitor progress toward dietary go
 
 ## 🛠️ Installation and Setup
 
-### Prerequisites
-
-- Node.js and npm
-- Ionic CLI
-- OpenAI API key
-
 ### Steps
 
 ```bash
@@ -104,9 +98,6 @@ cd bytetrack
 
 # Install dependencies
 npm install
-
-
-
 
 # Set up environment variables
 # Add your OpenAI API key in environment.ts
@@ -128,7 +119,7 @@ To run the app on android , you will first need to download android studio.
 
 3. npx cap open android
 
-4. press play at the top in android studio
+4. press play at the top in android studio, this will open the app in an emulator , or on your phone if you have plugged it in via usb
 
 
 
