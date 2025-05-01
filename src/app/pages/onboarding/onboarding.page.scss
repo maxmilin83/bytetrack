@@ -1,0 +1,74 @@
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    gap: 8px;
+    background-color: var(--ion-color-primary);
+    margin-bottom: 0;
+    border-bottom: none;
+}
+  
+.step-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+  
+.step-dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+  
+ion-content {
+    --padding-bottom: 80px;
+}
+  
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+  
+.spacer {
+    flex: 1;
+}
+  
+ion-item {
+    --inner-padding-end: 16px;
+    --padding-start: 16px;
+}
+  
+ion-radio {
+    margin: 0;
+    padding: 0;
+}
+  
+ion-item::part(detail-icon) {
+    display: none;
+}
+  
+.calorie-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+  
+.calorie-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--ion-color-primary);
+}
+  
+.calorie-unit {
+    font-size: 20px;
+    color: var(--ion-color-medium);
+}
+  
+.calorie-explanation {
+    text-align: center;
+    margin: 16px 0;
+}

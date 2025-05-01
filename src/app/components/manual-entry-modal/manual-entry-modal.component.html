@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Enter Food Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="foodForm" (ngSubmit)="confirm()">
+    <ion-item>
+      <ion-label position="floating">Food Name</ion-label>
+      <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Calories (kcal)</ion-label>
+      <ion-input formControlName="calories" type="number" inputmode="decimal" required (keydown)="preventInvalidNumberInput($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Protein (g)</ion-label>
+      <ion-input formControlName="protein" type="number" inputmode="decimal" required (keydown)="preventInvalidNumberInput($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Carbohydrates (g)</ion-label>
+      <ion-input formControlName="carbs" type="number" inputmode="decimal" required (keydown)="preventInvalidNumberInput($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fat (g)</ion-label>
+      <ion-input formControlName="fat" type="number" inputmode="decimal" required (keydown)="preventInvalidNumberInput($event)"></ion-input>
+    </ion-item>
+
+    <ion-button 
+      type="submit" 
+      expand="block" 
+      class="ion-margin-top" 
+      [disabled]="foodForm.invalid">
+      Confirm
+    </ion-button>
+  </form>
+</ion-content>

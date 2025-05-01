@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="stacked">Age</ion-label>
+      <ion-input 
+        type="number" 
+        [value]="age"
+        (ionInput)="updateAge($event.detail.value)"
+        min="1"
+        max="120">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Height (cm)</ion-label>
+      <ion-input 
+        type="number" 
+        [value]="height"
+        (ionInput)="updateHeight($event.detail.value)"
+        min="100"
+        max="250">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Weight (kg)</ion-label>
+      <ion-input 
+        type="number" 
+        [value]="weight"
+        (ionInput)="updateWeight($event.detail.value)"
+        min="30"
+        max="200">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Gender</ion-label>
+      <ion-select 
+        [value]="gender"
+        (ionChange)="updateGender($event.detail.value)">
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Activity Level</ion-label>
+      <ion-select 
+        [value]="activityLevel"
+        (ionChange)="updateActivityLevel($event.detail.value)">
+        <ion-select-option value="sedentary">Sedentary</ion-select-option>
+        <ion-select-option value="light">Light Activity</ion-select-option>
+        <ion-select-option value="moderate">Moderate Activity</ion-select-option>
+        <ion-select-option value="active">Very Active</ion-select-option>
+        <ion-select-option value="veryActive">Extra Active</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Goal</ion-label>
+      <ion-select 
+        [value]="goal"
+        (ionChange)="updateGoal($event.detail.value)">
+        <ion-select-option value="lose">Lose Weight</ion-select-option>
+        <ion-select-option value="maintain">Maintain Weight</ion-select-option>
+        <ion-select-option value="gain">Gain Weight</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Daily Calorie Target</h2>
+        <p>{{ calculatedCalories }} calories</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="saveProfile()" class="ion-margin-top">
+    Save Profile
+  </ion-button>
+</ion-content>

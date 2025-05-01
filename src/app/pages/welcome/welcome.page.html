@@ -1,0 +1,38 @@
+<ion-content>
+  <swiper-container #swiper [pagination]="true" [initialSlide]="0" init="false">
+    <!-- Slide 1 -->
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/welcome/slide1.svg" alt="Welcome">
+        <h1>Welcome to ByteTrack</h1>
+        <p>Track your calories with just a photo</p>
+        
+        <ion-button expand="block" (click)="nextSlide()">Next</ion-button>
+        <ion-button expand="block" fill="clear" (click)="skipWelcome()">Skip</ion-button>
+      </div>
+    </swiper-slide>
+
+    <!-- Slide 2 -->
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/welcome/slide2.svg" alt="How it works">
+        <h1>Snap a Photo</h1>
+        <p>Our AI identifies your food and calculates calories instantly</p>
+        
+        <ion-button expand="block" (click)="nextSlide()">Next</ion-button>
+        <ion-button expand="block" fill="clear" (click)="skipWelcome()">Skip</ion-button>
+      </div>
+    </swiper-slide>
+
+    <!-- Slide 3 -->
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/welcome/slide3.svg" alt="Get started">
+        <h1>Ready to Start?</h1>
+        <p>Let's set up your profile to get personalized recommendations</p>
+        
+        <ion-button expand="block" (click)="completeWelcome()">Get Started</ion-button>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>

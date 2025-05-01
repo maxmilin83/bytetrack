@@ -1,0 +1,204 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Set Up Your Profile</ion-title>
+  </ion-toolbar>
+  <div class="step-indicator">
+    <div *ngFor="let step of [1,2,3,4,5,6,7]" 
+         [ngClass]="{'step-dot': true, 'active': step <= currentStep}"></div>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Step 1 Introduction -->
+  <div *ngIf="currentStep === 1">
+    <h2>Welcome to ByteTrack!</h2>
+    <p>Let's set up your profile to provide personalized nutrition recommendations.</p>
+    <p>We'll ask you a few questions to calculate your daily calorie target.</p>
+    
+  </div>
+  
+  <!-- Step 2 Ag -->
+  <div *ngIf="currentStep === 2">
+    <h2>How old are you?</h2>
+    <p>Your age helps us calculate your metabolic rate.</p>
+    
+    <ion-item>
+      <ion-label position="floating">Age (years)</ion-label>
+      <ion-input type="number" [(ngModel)]="profile.age" min="16" max="100"></ion-input>
+    </ion-item>
+
+  </div>
+  
+  <!-- Step 3 Height and Weight -->
+  <div *ngIf="currentStep === 3">
+    <h2>What's your height and weight?</h2>
+    <p>This helps us determine your energy needs.</p>
+    
+    <ion-item>
+      <ion-label position="floating">Height (cm)</ion-label>
+      <ion-input type="number" [(ngModel)]="profile.height" min="100" max="250"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Weight (kg)</ion-label>
+      <ion-input type="number" [(ngModel)]="profile.weight" min="30" max="300"></ion-input>
+    </ion-item>
+    
+
+  </div>
+  
+  <!-- Step 4 Gender -->
+  <div *ngIf="currentStep === 4">
+    <h2>What's your biological sex?</h2>
+    <p>This affects your metabolic rate calculation.</p>
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="profile.gender">
+        <ion-item button="true" detail="false" (click)="profile.gender = 'male'">
+          <ion-label>Male</ion-label>
+          <ion-radio slot="end" value="male"></ion-radio>
+        </ion-item>
+        
+        <ion-item button="true" detail="false" (click)="profile.gender = 'female'">
+          <ion-label>Female</ion-label>
+          <ion-radio slot="end" value="female"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    
+
+  </div>
+  
+  <!-- Step 5 Activity Level -->
+  <div *ngIf="currentStep === 5">
+    <h2>What's your activity level?</h2>
+    <p>This helps us determine how many calories you burn in a day.</p>
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="profile.activityLevel">
+        <!-- List each item individually instead of using ngFor -->
+        <ion-item button="true" detail="false" (click)="profile.activityLevel = 'sedentary'">
+          <ion-label>
+            <h3>Sedentary</h3>
+            <p>Little or no exercise, desk job</p>
+          </ion-label>
+          <ion-radio slot="end" value="sedentary"></ion-radio>
+        </ion-item>
+        
+        <ion-item button="true" detail="false" (click)="profile.activityLevel = 'light'">
+          <ion-label>
+            <h3>Lightly Active</h3>
+            <p>Light exercise 1-3 days/week</p>
+          </ion-label>
+          <ion-radio slot="end" value="light"></ion-radio>
+        </ion-item>
+        
+        <ion-item button="true" detail="false" (click)="profile.activityLevel = 'moderate'">
+          <ion-label>
+            <h3>Moderately Active</h3>
+            <p>Moderate exercise 3-5 days/week</p>
+          </ion-label>
+          <ion-radio slot="end" value="moderate"></ion-radio>
+        </ion-item>
+        
+        <ion-item button="true" detail="false" (click)="profile.activityLevel = 'active'">
+          <ion-label>
+            <h3>Very Active</h3>
+            <p>Hard exercise 6-7 days/week</p>
+          </ion-label>
+          <ion-radio slot="end" value="active"></ion-radio>
+        </ion-item>
+        
+        <ion-item button="true" detail="false" (click)="profile.activityLevel = 'veryActive'">
+          <ion-label>
+            <h3>Extra Active</h3>
+            <p>Physical job or twice daily training</p>
+          </ion-label>
+          <ion-radio slot="end" value="veryActive"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+  
+  <!-- Step 6 Goal -->
+  <div *ngIf="currentStep === 6">
+    <h2>What's your fitness goal?</h2>
+    <p>This will adjust your daily calorie target.</p>
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="profile.goal">
+
+        <ion-item button="true" detail="false" (click)="profile.goal = 'lose'">
+          <ion-label>
+            <h3>Lose Weight</h3>
+            <p>Create a calorie deficit</p>
+          </ion-label>
+          <ion-radio slot="end" value="lose"></ion-radio>
+        </ion-item>
+        
+        <ion-item button="true" detail="false" (click)="profile.goal = 'maintain'">
+          <ion-label>
+            <h3>Maintain Weight</h3>
+            <p>Stay at current weight</p>
+          </ion-label>
+          <ion-radio slot="end" value="maintain"></ion-radio>
+        </ion-item>
+        
+        <ion-item button="true" detail="false" (click)="profile.goal = 'gain'">
+          <ion-label>
+            <h3>Gain Weight</h3>
+            <p>Build muscle or increase weight</p>
+          </ion-label>
+          <ion-radio slot="end" value="gain"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  <div *ngIf="currentStep === 7">
+    <h2>Your Daily Plan is Ready!</h2>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Based on your profile</ion-card-subtitle>
+        <ion-card-title>Your Daily Calorie Target</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <div class="calorie-display">
+          <span class="calorie-number">{{ calculatedCalories }}</span>
+          <span class="calorie-unit">calories</span>
+        </div>
+        
+        <p class="calorie-explanation">
+          This is your recommended daily intake to {{ profile.goal === 'lose' ? 'lose weight gradually' : 
+          profile.goal === 'gain' ? 'gain weight steadily' : 'maintain your current weight' }}.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="footer-buttons">
+      <ion-button *ngIf="currentStep > 1" fill="outline" (click)="previousStep()">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+        Back
+      </ion-button>
+      
+      <div class="spacer"></div>
+      
+      <ion-button *ngIf="currentStep < totalSteps" (click)="nextStep()">
+        Next
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+      
+      <ion-button *ngIf="currentStep === totalSteps" color="success" (click)="completeOnboarding()">
+        Get Started
+        <ion-icon slot="end" name="checkmark"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

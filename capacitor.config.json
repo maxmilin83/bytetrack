@@ -1,0 +1,15 @@
+{
+    "appId": "io.ionic.bytetrack",
+    "appName": "ByteTrack",
+    "webDir": "www",
+    "bundledWebRuntime": false,
+    "plugins": {
+      "Camera": {
+        "ios": {
+          "NSCameraUsageDescription": "We need camera access to take photos",
+          "NSPhotoLibraryAddUsageDescription": "We need photo library access to save photos",
+          "NSPhotoLibraryUsageDescription": "We need photo library access to get photos"
+        }
+      }
+    }
+  }

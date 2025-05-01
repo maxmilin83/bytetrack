@@ -1,0 +1,430 @@
+// Calendar Card 
+.calendar-card {
+  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  ion-card-header {
+    padding-bottom: 0;
+  }
+
+  .date-picker {
+    width: 100%;
+  }
+}
+
+// summary Card 
+.summary-card {
+  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .calorie-progress {
+    margin-bottom: 24px;
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+
+      h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .calorie-count {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+
+    ion-progress-bar {
+      height: 8px;
+      border-radius: 4px;
+    }
+
+    .progress-label {
+      margin: 8px 0 0;
+      font-size: 0.9rem;
+      color: var(--ion-color-medium);
+    }
+  }
+
+  .macros-progress {
+    h3 {
+      margin: 0 0 16px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .macro-bars {
+      .macro-item {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .macro-label {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 4px;
+          font-size: 0.9rem;
+        }
+
+        ion-progress-bar {
+          height: 6px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+
+// Meals Card Styles
+.meals-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--ion-color-medium);
+    }
+  }
+
+  .no-meals {
+    ion-label {
+      color: var(--ion-color-medium);
+      padding: 16px 0;
+    }
+  }
+}
+
+/* Date Navigation Styles */
+.date-navigation-card {
+  margin: 16px auto;
+  width: calc(100% - 32px);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.date-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  justify-content: center;
+  flex: 1;
+}
+
+.current-date {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.calendar-icon {
+  font-size: 1.2rem;
+  color: var(--ion-color-primary);
+}
+
+/* Card Styles */
+ion-card {
+  margin: 16px auto;
+  width: calc(100% - 32px);
+  border-radius: 16px;
+}
+
+ion-card-content {
+  padding: 16px;
+}
+
+.summary-card {
+  margin-top: 0;
+}
+
+/* Progress Styles */
+.calorie-progress {
+  margin-bottom: 24px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.progress-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.calorie-count {
+  font-weight: 500;
+}
+
+.progress-label {
+  margin-top: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ion-color-medium);
+}
+
+/* Macro Styles */
+.macros-progress h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.macro-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.macro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.macro-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* Analytics Card Styles */
+.analytics-card {
+  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .section-title {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-top: 8px;
+  }
+
+  ion-segment {
+    margin-bottom: 16px;
+  }
+
+  ion-card-header {
+    padding: 16px;
+    
+    ion-segment {
+      margin-top: 12px;
+    }
+  }
+
+  .chart-container {
+    height: 220px;
+    margin-bottom: 16px;
+  }
+
+  .stats-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px;
+      border-radius: 12px;
+      background-color: var(--ion-card-background);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      flex: 1;
+      margin: 0 4px;
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: var(--ion-color-medium);
+        margin-bottom: 4px;
+      }
+
+      .stat-value {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--ion-color-medium);
+      }
+    }
+  }
+}
+
+/* Ensure the progress bars are visible */
+ion-progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+  }
+
+  .calendar-card,
+  .summary-card,
+  .meals-card {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+ion-content {
+  --background: var(--ion-color-light);
+}
+
+ion-card {
+  margin: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  ion-card-header {
+    padding: 16px;
+    
+    ion-card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  ion-card-content {
+    padding: 16px;
+  }
+}
+
+// Material Datepicker Styles
+::ng-deep .mat-datepicker-popup {
+  background: white !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+::ng-deep .mat-calendar {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+
+  .mat-calendar-header {
+    padding: 0 8px 8px;
+    background: white;
+    
+    .mat-calendar-controls {
+      margin: 0;
+      
+      .mat-calendar-period-button,
+      .mat-calendar-previous-button,
+      .mat-calendar-next-button {
+        color: var(--ion-color-dark);
+      }
+    }
+  }
+
+  .mat-calendar-table {
+    width: 100%;
+    
+    .mat-calendar-body-cell {
+      border-radius: 50%;
+      
+      &.mat-calendar-body-selected {
+        background-color: var(--ion-color-primary);
+        color: white;
+      }
+      
+      &:hover:not(.mat-calendar-body-disabled) {
+        background-color: rgba(var(--ion-color-primary-rgb), 0.1);
+      }
+    }
+
+    .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+      border-color: var(--ion-color-primary);
+    }
+  }
+}
+
+::ng-deep .mat-datepicker-content {
+  background: white;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+
+  .mat-calendar {
+    width: 100vw;
+    max-width: 360px;
+    height: auto;
+  }
+}
+
+
+::ng-deep .date-picker {
+  .mat-form-field-flex {
+    background-color: rgba(var(--ion-color-light-rgb), 0.7);
+    border-radius: 8px;
+    padding: 0 12px !important;
+  }
+
+  .mat-form-field-underline {
+    display: none;
+  }
+
+  .mat-datepicker-toggle {
+    color: var(--ion-color-medium);
+  }
+
+  .mat-form-field-label {
+    color: var(--ion-color-medium);
+  }
+}
+
+
+.section-title, 
+.macros-progress h3,
+.calorie-progress .progress-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.period-subtitle {
+  font-size: 1rem;
+  color: var(--ion-color-medium);
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+
+.section-title, 
+.progress-header h3,
+.macros-progress h3 {
+  color: var(--ion-color-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}

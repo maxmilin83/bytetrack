@@ -1,0 +1,40 @@
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .slide-content {
+    padding: 20px;
+    width: 80%;
+    
+    img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 40px;
+      object-fit: contain;
+    }
+    
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      color: var(--ion-color-medium);
+    }
+    
+    ion-button {
+      margin-bottom: 10px;
+    }
+  }
